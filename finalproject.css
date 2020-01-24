@@ -1,0 +1,37 @@
+
+body {
+  /* font-family: 'Open Sans', sans-serif; */
+  background-color: #e6e6e6;
+
+}
+h1 {
+  font-weight: bold;
+}
+//
+text {
+  font-size: 12px;
+  fill: #fff;
+}
+
+path {
+  stroke: gray;
+}
+
+line {
+  stroke: gray;
+}
+
+line#limit {
+  stroke: #FED966;
+  stroke-width: 3;
+  stroke-dasharray: 3 6;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.grid .tick line {
+  stroke: #9FAAAE;
+  stroke-opacity: 0.3;
+}
