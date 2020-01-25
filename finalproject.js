@@ -158,12 +158,12 @@ let svg = d3
       .text('Expected Growth per Occupation Field (2018-2028)')
 
 
-/*
-NEW GRAPH, V2
+// /*
+// NEW GRAPH, V2
 
-*/
+// */
 
-let svg = d3
-  .select('svg#growthOpenings');
+// let svg = d3
+//   .select('svg#growthOpenings');
 
 
