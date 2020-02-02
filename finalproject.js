@@ -31,13 +31,12 @@ let svg = d3
       .domain(projectedGrowth.map((d) => d.occupation))
       .range([0, width])
       .padding(0.25)
-
+      
     // creates y axis
     const yScale = d3.scaleLinear()
       .domain(d3.extent(projectedGrowth.map(d => d.changePercent)))
       .range([height, 0])
-
-
+      
     const makeYLines = () => d3.axisLeft()
       .scale(yScale)
 
@@ -157,6 +156,17 @@ let svg = d3
       .attr('font-weight', 'bold')
       .text('Expected Growth per Occupation Field (2018-2028)')
 
+    svg.append('text')
+      .attr('class', 'description')
+      .attr('x', width / 2 + margin)
+      .attr('y', 40)
+      .attr('text-anchor', 'middle')
+      .attr('font-size', 24)
+      .attr('font-weight', 'bold')
+      .text('Expected Growth per Occupation Field (2018-2028)')
+  
+  
+// based on tutorial from: https://blog.risingstack.com/d3-js-tutorial-bar-charts-with-javascript/
 
 // /*
 // NEW GRAPH, V2
@@ -167,3 +177,36 @@ let svg = d3
 //   .select('svg#growthOpenings');
 
 
+// let graph2 = [
+//   {"field":"Computer Science", "growth":546200, "openings":403500},
+//   {"field":"Mathematics", "growth":47700, "openings":18800},
+//   {"field":"Engineering", "growth":85000, "openings":135400},
+//   {"field":"Life/Physical/Social Science", "growth":97400, "openings":143300},
+//   ]
+
+// // builds the rectangles
+// d3.selectAll('svg#big-countries')
+//   .selectAll('rect')
+//   .data(graph2.sort((a, b) => a.growth - b.growth))
+//   .enter()
+//   .append('rect')
+//   .transition()
+//   .duration(2000)
+//   .attr('x', 140)
+//   .attr('y', (d, i) => i * 20)
+//   .attr('height', 15)
+//   .attr('width', d => (d.Rural / 100) * 400)
+//   .attr('width', 
+//   .style('fill', 'red')
+
+// // builds the text
+// d3.selectAll('svg#big-countries')
+//   .selectAll('text')
+//   .data(countries)
+//   .enter()
+//   .append('text')
+//   .attr('x', 0)
+//   .attr('y', (d, i) => i * 20 + 11.5)
+//   .attr('height', 15)
+//   .text(d => (d.Country))
+  
